@@ -79,7 +79,7 @@ if err != nil {
 defer conn.Close() // Закрываем соединение
 
 // Отправляем HTTP-запрос
-_, err = conn.Write([]byte("GET / HTTP/1.1\r\nHost: example.com\r\n\r\n"))
+_, err = conn.Write([]byte("GET / HTTP/1.1\nHost: example.com\n\n"))
 if err != nil {
     panic(err)
 }
